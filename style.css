@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.wrapper {
+  padding: .5rem;
+  border-radius: .5rem;
+  border: 1px solid black;
+  display: grid;
+  gap: .5rem;
+
+  > * {
+    width: auto;
+    height: 3rem;
+    display: grid;
+    place-items: center;
+    position: relative;
+
+    > input {
+      width: 100%;
+      height: 100%;
+    }
+
+    > span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-30deg);
+      font-family: arial;
+      font-size: .8rem;
+    }
+  }
+}
+
+.top-wrapper {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.bottom-wrapper {
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.color-scheme {
+  height: 35ch
+}
